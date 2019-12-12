@@ -2,3 +2,6 @@
 # challenge_back
 Desafio Mirante (Hackaton): API em Springboot Com Authorizacao e Autenticação,JWT, banco em memória facil de rodar
 
+Possui Spring-boot, Data, REST, tudo configurado e implementado para a versão 2.x+ do Spring boot.
+e tem integração continua com o TRAVIS CI (segue badge informativo de build OK no topo)
+
