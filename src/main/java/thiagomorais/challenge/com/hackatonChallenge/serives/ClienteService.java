@@ -8,4 +8,6 @@ public interface ClienteService {
 
 	List<ClienteDTO> obterTodos();
 
+	void deletar(Long idCliente);
+
 }

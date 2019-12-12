@@ -23,7 +23,7 @@ public class Cliente {
 	private String nome;
 	private String cpf;
 	
-	@OneToOne(mappedBy = "cliente")
+	@OneToOne(mappedBy = "cliente",fetch = FetchType.EAGER)
 	private Endereco endereco;
 	
 	@OneToMany(fetch = FetchType.EAGER,mappedBy = "cliente")

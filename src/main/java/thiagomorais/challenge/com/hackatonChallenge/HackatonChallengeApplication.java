@@ -16,6 +16,7 @@ import thiagomorais.challenge.com.hackatonChallenge.entidades.TipoContatoEnum;
 import thiagomorais.challenge.com.hackatonChallenge.entidades.Usuario;
 import thiagomorais.challenge.com.hackatonChallenge.enums.PerfilEnum;
 import thiagomorais.challenge.com.hackatonChallenge.repositories.ClienteRepository;
+import thiagomorais.challenge.com.hackatonChallenge.repositories.ContatoRepository;
 import thiagomorais.challenge.com.hackatonChallenge.repositories.EnderecoRepository;
 import thiagomorais.challenge.com.hackatonChallenge.repositories.UsuarioRepository;
 import thiagomorais.challenge.com.hackatonChallenge.utils.SenhaUtils;
@@ -58,6 +59,10 @@ public class HackatonChallengeApplication {
 			this.usuarioRepository.save(admin);
 			
 			//Adicionando um cliente
+			clienteRepository.deleteAll();
+			enderecoRepository.deleteAll();
+			contatoRepository.deleteAll();
+			
 			Cliente thiago = this.clienteRepository.save(new Cliente("Thiago","03964258105"));
 			Endereco enderecoThiago = new Endereco();
 			enderecoThiago.setBairro("Taguatinga Sul");
