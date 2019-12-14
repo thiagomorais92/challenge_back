@@ -36,7 +36,7 @@ public class ClienteController {
 	@DeleteMapping("/{id}")
 	@PreAuthorize("hasAnyRole('ADMIN')")
 	public void deleteCliente(@PathVariable("id") Long id){
-		log.info("QUE ISSO MANO, {}.,.,.,.,..,.  {}",id,clienteService);
+		log.info("deletando o cliente, {}.,.,.,.,..,.  {}");
 		clienteService.deletar(id);
 	} 
 	

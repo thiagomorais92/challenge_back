@@ -11,6 +11,8 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import thiagomorais.challenge.com.hackatonChallenge.enums.TipoCategoriaContatoEnum;
+
 @Entity
 public class Contato {
 
@@ -22,6 +24,9 @@ public class Contato {
 	
 	@Enumerated(EnumType.STRING)
 	private TipoContatoEnum tipoContato;
+	
+	@Enumerated(EnumType.STRING)
+	private TipoCategoriaContatoEnum tipocategoriaContatoEnum;
 	
 	@ManyToOne
 	@JoinColumn(name="client_id",nullable = false)
@@ -61,7 +66,13 @@ public class Contato {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-	
-	
+
+	public TipoCategoriaContatoEnum getTipocategoriaContatoEnum() {
+		return tipocategoriaContatoEnum;
+	}
+
+	public void setTipocategoriaContatoEnum(TipoCategoriaContatoEnum tipocategoriaContatoEnum) {
+		this.tipocategoriaContatoEnum = tipocategoriaContatoEnum;
+	}
 	
 }
