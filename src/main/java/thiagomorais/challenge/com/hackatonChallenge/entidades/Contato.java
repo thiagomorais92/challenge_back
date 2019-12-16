@@ -40,6 +40,20 @@ public class Contato {
 		this.textoContato = descricao;
 		this.cliente = cli;
 	}
+	
+	public Contato(TipoContatoEnum tipoContato, String descricao,TipoCategoriaContatoEnum tipoCat) {
+		this.tipoContato = tipoContato;
+		this.textoContato = descricao;
+		this.tipocategoriaContatoEnum = tipoCat;
+	}
+	
+	public Contato(TipoContatoEnum tipoContato, String descricao, TipoCategoriaContatoEnum tipoCat, Cliente cli) {
+		this.tipoContato = tipoContato;
+		this.textoContato = descricao;
+		this.tipocategoriaContatoEnum = tipoCat;
+		this.cliente = cli;
+	}
+
 	public Long getId() {
 		return id;
 	}

@@ -2,6 +2,7 @@ package thiagomorais.challenge.com.hackatonChallenge.entidades;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,6 +22,8 @@ public class Cliente {
 	
 	
 	private String nome;
+	
+	@Column(unique = true)
 	private String cpf;
 	
 	@OneToOne(mappedBy = "cliente",fetch = FetchType.EAGER)

@@ -75,7 +75,7 @@ public class HackatonChallengeApplication {
 			
 			List<Contato> contatos = new ArrayList<Contato>(0);
 			contatos.add(contatoRepository.save(new Contato(TipoContatoEnum.EMAIL,"araujodemorais.t@gmail.com",thiago)));
-			contatos.add(contatoRepository.save(new Contato(TipoContatoEnum.TELEFONE,"982877750",thiago)));
+			contatos.add(contatoRepository.save(new Contato(TipoContatoEnum.TELEFONE,"61982877750",thiago)));
 			
 			thiago.setContatos(contatos);
 			
